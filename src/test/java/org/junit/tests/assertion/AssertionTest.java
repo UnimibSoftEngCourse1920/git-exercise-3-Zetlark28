@@ -30,6 +30,8 @@ public class AssertionTest {
 // @Test (expected=AssertionError.class) public void error() {
 //      assert false;
 //  }
+    
+
 
     @Test(expected = AssertionError.class)
     public void fails() {
@@ -258,6 +260,17 @@ public class AssertionTest {
         assertEquals(1.0d, 1.0d, 0.0d);
     }
 
+    @Test
+    public void  assertGreaterThan() {
+        Object o = new Object();
+        Object o2=new Object();
+        assertGreaterThan('c','a',comparator);
+        assertGreaterThan('c','a',comparator);
+        assertGreaterThan(o2,o,comparator);
+        assertGreaterThan(5,2, comparator);
+    }
+    
+    
     @Test(expected = AssertionError.class)
     public void notEqualsObjectWithNull() {
         assertEquals(new Object(), null);
