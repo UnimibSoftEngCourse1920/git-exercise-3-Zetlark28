@@ -293,6 +293,12 @@ public class AssertionTest {
                 new Object[][][]{{}},
                 "not equal: array lengths differed, expected.length=2 actual.length=1; arrays first differed at element [1]; expected:<java.lang.Object[][1]> but was:<end of array>");
     }
+    
+    @Test 
+    public void assertionGreaterThan(int o1,int o2) {
+        assertionGreaterThan(2,5);
+        assertionGreaterThan(12,5);
+    }
 
     @Test
     public void twoDimensionalArraysDifferentInnerLengthNotEqual() {
